@@ -1,0 +1,28 @@
+@use "./breakpoints";
+
+.curtie-photo {
+  width: 80%;
+  margin: auto;
+  display: block;
+  @include breakpoints.media-breakpoint-up(md) {
+    width: 100%;
+    margin-top: 7rem;
+  }
+}
+
+.container.about {
+
+  @include breakpoints.media-breakpoint-up(md) {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+.about-text {
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  p:first-of-type {
+    margin-top: 0;
+  }
+}

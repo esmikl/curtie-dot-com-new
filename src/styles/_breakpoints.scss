@@ -1,0 +1,28 @@
+$breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1920px
+) !default;
+
+@function breakpoint-min($size) {
+  @if not map-has-key($breakpoints, $size) {
+    @error "Invalid style specified! Choose one of #{map-keys($breakpoints)}";
+  }
+  $min: map-get($breakpoints, $size);
+
+  @return $min;
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: breakpoint-min($name);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
