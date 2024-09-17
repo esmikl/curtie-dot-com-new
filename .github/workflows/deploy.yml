@@ -34,3 +34,5 @@ jobs:
           private-ssh-key: ${{secrets.FTP_SSH_KEY}}
           destination-path: ${{env.SERVER_DIR}}
           source-path: ${{env.LOCAL_DIR}}
+          ssh-port: '22'
+          rsync-options: '--archive --verbose --compress --human-readable --progress --delete-after --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore --exclude=**/node_modules/** --exclude=.cache/ --exclude=.idea/ --exclude=src/ --exclude=.prettierignore --exclude=.prettierrc --exclude=gatsby-config.ts --exclude=package.json --exclude=package-lock.json --exclude=tsconfig.json'
