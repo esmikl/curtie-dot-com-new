@@ -19,7 +19,7 @@ jobs:
 
       # Install Dependencies
       - name: Install Dependences
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       # Build
       - name: Build Project
