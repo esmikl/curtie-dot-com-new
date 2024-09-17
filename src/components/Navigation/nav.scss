@@ -1,0 +1,103 @@
+@import "../../styles/colors";
+@import "../../styles/breakpoints";
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      justify-content: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        color: $text;
+        text-decoration: none;
+        font-size: 1.5rem;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: '';
+          height: 3px;
+          left: 50%;
+          bottom: 0;
+          background-color: $primary;
+          width: 0;
+          transition: 350ms;
+        }
+
+        &:hover,
+        &.active {
+          font-weight: bold;
+
+          &:after {
+            width: 100%;
+            left: 0;
+            right: 0;
+            transition: 350ms;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted $text;
+        }
+
+        &:visited {
+          color: $text;
+        }
+      }
+    }
+  }
+
+  &.closed {
+    height: 0;
+    opacity: 0;
+    transition: height 350ms ease-in-out, opacity 300ms ease-in, display 300ms ease-in, visibility 300ms ease-in;
+
+    ul {
+      display: none;
+      visibility: hidden;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+      opacity: 1;
+
+      ul {
+        display: flex;
+        visibility: visible;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &.open {
+    height: 12rem;
+    opacity: 1;
+    transition: height 350ms ease-in-out, opacity 700ms ease-in, display 700ms ease-in, visibility 700ms ease-in;
+
+    ul {
+      display: flex;
+      visibility: visible;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+      opacity: 1;
+
+      ul {
+        display: flex;
+        visibility: visible;
+        flex-direction: row;
+      }
+    }
+  }
+}
