@@ -1,8 +1,10 @@
 $breakpoints: (
   xs: 0,
   sm: 600px,
-  md: 960px,
-  lg: 1280px,
+        tablet-sm: 768px,
+        tablet: 1024px,
+  md: 1200px,
+  lg: 1400px,
   xl: 1920px
 ) !default;
 
