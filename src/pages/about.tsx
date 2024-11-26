@@ -13,37 +13,47 @@ const About = () => {
                     <Grid item xs={12} md={8} className={"about-text"}>
                         <h1>Meet Curtie</h1>
                         <p>
-                            Greetings! Thanks for stopping by! I own and operate
-                            a portrait studio along with my wife Julie Rae who
-                            has been here with me since Dec, 2004. You can visit{" "}
-                            <a
-                                href={"http://thelookphotography.com/"}
-                                target={"_blank"}
-                                rel={"noreferrer"}
-                            >
-                                www.thelookphotography.com
-                            </a>{" "}
-                            to see her work.
+                            Greetings! Welcome to Curtie Dot Com Inc.
+                            Photography services. I have been here at the same
+                            location in Bloomer telling folks to say "CHEESE"
+                            since 1980! I'm still around but do photography
+                            strictly on location and at a low volume level as I
+                            enter my "golden years". I am a "meat and potatoes"
+                            photographer where you will receive the raw unedited
+                            images on a flash drive and you may take that and
+                            run! I don't have time for all the fancy digital
+                            editing and if you're wanting that I can point you
+                            in the right direction of some top notch
+                            photographers in the Chippewa Valley.
                         </p>
+                        <h2>What will I do?</h2>
                         <p>
-                            Since 2009 I fell into another career of
-                            transportation becoming a Motor-Coach driver for the
-                            then Blackhawk Express and now{" "}
-                            <a
-                                href={"https://www.kobussen.com/"}
-                                target={"_blank"}
-                                rel={"noreferrer"}
-                            >
-                                Kobussen Buses, Ltd
-                            </a>
-                            . I am full time with Kobussen Buses in Bloomer, but
-                            will take on the occasional wedding, family, or
-                            senior portrait session. My wife and I also take
-                            care of the photo needs of 1,000 school children and
-                            their families in the fall of the year. Please feel
-                            free to contact me with whatever needs you have in
-                            the photography world, and If I cannot accommodate I
-                            will introduce you to my lovely and talented wife.
+                            The occasional, graduating senior (not a multi hour
+                            session), family, small intimate wedding, kids,
+                            etc...
+                        </p>
+                        <h3>Services no longer offered:</h3>
+                        <p>
+                            The following I have been there, done that and do
+                            not have the time/energy available anymore.
+                        </p>
+                        <ul>
+                            <li>All day weddings</li>
+                            <li>
+                                Senior photos with multi-changes and locations
+                                taking hours and hours to photograph.
+                            </li>
+                            <li>
+                                Family or any group that half in attendance do
+                                not want to participate.
+                            </li>
+                        </ul>
+                        <p>
+                            I'm in my 4th quarter of life and I'm going to have
+                            fun! I'm only here as I still do enjoy it and if the
+                            right "gig" comes along I'll say yes if my schedule
+                            permits. <a href={"/contact"}>Contact me</a> to
+                            visit about your request.
                         </p>
                     </Grid>
                     <Grid item xs={12} md={3}>

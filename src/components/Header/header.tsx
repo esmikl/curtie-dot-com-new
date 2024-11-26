@@ -41,7 +41,7 @@ const Header = () => {
                                 xs: "inline-flex",
                                 sm: "inline-flex",
                                 md: "inline-flex",
-                                lg: "none"
+                                lg: "none",
                             },
                         }}
                         style={styles}

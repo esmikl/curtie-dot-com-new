@@ -71,10 +71,10 @@ const Contact = () => {
                 process.env.GATSBY_EMAILJS_SERVICE_ID,
                 process.env.GATSBY_EMAILJS_TEMPLATE_ID,
                 {
-                    "from_name": values.name,
-                    "message": values.message,
-                    "phone": values.phone,
-                    "email": values.email,
+                    from_name: values.name,
+                    message: values.message,
+                    phone: values.phone,
+                    email: values.email,
                 },
                 {
                     publicKey: process.env.GATSBY_EMAILJS_PUBLIC_KEY,
