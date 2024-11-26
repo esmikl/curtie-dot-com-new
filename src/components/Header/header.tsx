@@ -40,7 +40,8 @@ const Header = () => {
                             display: {
                                 xs: "inline-flex",
                                 sm: "inline-flex",
-                                md: "none",
+                                md: "inline-flex",
+                                lg: "none",
                             },
                         }}
                         style={styles}

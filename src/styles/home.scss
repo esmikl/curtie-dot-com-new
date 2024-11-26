@@ -1,53 +1,84 @@
 @use "./breakpoints";
 
-.main-photo,
-.main-photo-2,
-.secondary-photo-1,
-.secondary-photo-2,
-.secondary-photo-3 {
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    height: 100%;
-    min-height: 30rem;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
 }
 
-.secondary-photo-3 {
+.main-photo,
+.main-photo-2,
+.secondary-photo-large,
+.secondary-photo-small,
+.third-row-1,
+.third-row-2,
+.third-row-3 {
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    min-height: 30rem;
+    @include breakpoints.media-breakpoint-up(sm) {
+        min-height: 50rem;
+    }
+    @include breakpoints.media-breakpoint-up(tablet-sm) {
+        height: calc(100vh - 6.625rem);
+    }
 }
 
 .main-photo {
-    background-image: url("../../src/images/main_sunflowers_760px.webp");
+    background-image: url("../../src/images/family-photo_1200px.webp");
+    grid-column: span 12 / span 12;
 
     @include breakpoints.media-breakpoint-up(md) {
-        background-image: url("../../src/images/main_sunflowers_1200px.webp");
-        height: 75vh;
+        grid-column: span 8 / span 8;
     }
 
     @include breakpoints.media-breakpoint-up(lg) {
-        background-image: url("../../src/images/main_sunflowers_2600px.webp");
+        background-image: url("../../src/images/family-photo_2600px.webp");
     }
 }
 
 .main-photo-2 {
-    background-image: url("../../src/images/main-photo-2_760px.webp");
+    background-image: url("../../src/images/grad-photo-1_760px.webp");
+    grid-column: span 12 / span 12;
 
     @include breakpoints.media-breakpoint-up(md) {
-        background-image: url("../../src/images/main-photo-2_1200px.webp");
-        height: 75vh;
+        background-image: url("../../src/images/grad-photo-1_1200px.webp");
+        grid-column: span 4 / span 4;
+    }
+}
+
+.secondary-photo-small {
+    background-image: url("../../src/images/grad-photo-2_760px.webp");
+    grid-column: span 12 / span 12;
+
+    @include breakpoints.media-breakpoint-up(md) {
+        background-image: url("../../src/images/grad-photo-2_1200px.webp");
+        grid-column: span 4 / span 4;
+    }
+}
+
+.secondary-photo-large {
+    background-image: url("../../src/images/wedding-group_1200px.webp");
+    grid-column: span 12 / span 12;
+
+    @include breakpoints.media-breakpoint-up(md) {
+        grid-column: span 8 / span 8;
     }
 
     @include breakpoints.media-breakpoint-up(lg) {
-        background-image: url("../../src/images/main-photo-2_2600px.webp");
+        background-image: url("../../src/images/wedding-group_2600px.webp");
     }
 }
 
 @for $i from 1 through 3 {
-    .secondary-photo-#{$i} {
-        background-image: url("../../src/images/secondary_photo_#{$i}_760px.webp");
+    .third-row-#{$i} {
+        background-image: url("../../src/images/third-row-#{$i}_760px.webp");
+        grid-column: span 12 / span 12;
+
         @include breakpoints.media-breakpoint-up(md) {
-            background-image: url("../../src/images/secondary_photo_#{$i}_1200px.webp");
-            height: 75vh;
+            background-image: url("../../src/images/third-row-#{$i}_1200px.webp");
+            grid-column: span 4 / span 4;
         }
     }
 }
