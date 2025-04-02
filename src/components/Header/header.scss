@@ -1,4 +1,4 @@
-@import "../../styles/breakpoints";
+@use "../../styles/breakpoints";
 @import "../../styles/colors";
 
 .header {
@@ -14,12 +14,12 @@
     border-top: 1rem solid $primary;
 
     .container {
+        position: relative;
         padding: 0.5rem;
-        @include media-breakpoint-up(md) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -36,4 +36,19 @@
 .logo-wrapper {
     display: flex;
     align-items: center;
+    margin-right: auto;
+}
+
+.affiliate-links {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+        margin: 1rem;
+        display: flex;
+    }
+
+    @include breakpoints.media-breakpoint-up(sm) {
+        flex-basis: auto;
+    }
 }

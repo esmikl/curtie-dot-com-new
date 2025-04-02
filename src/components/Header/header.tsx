@@ -7,6 +7,7 @@ import "./header.scss"
 import largeLogo from "../../images/curtie-logo.svg"
 import IconButton from "@mui/material/IconButton"
 import MenuIcon from "@mui/icons-material/Menu"
+import {StaticImage} from "gatsby-plugin-image";
 
 const styles = {
     color: "#000",
@@ -35,22 +36,13 @@ const Header = () => {
                             alt="Curtie Dot Com, Inc."
                         />
                     </Link>
-                    <IconButton
-                        sx={{
-                            display: {
-                                xs: "inline-flex",
-                                sm: "inline-flex",
-                                md: "inline-flex",
-                                lg: "none",
-                            },
-                        }}
-                        style={styles}
-                        onClick={handleToggle}
-                    >
-                        <MenuIcon />
-                    </IconButton>
+
                 </div>
-                <Nav open={open} setOpen={toggleMenu} />
+                <Nav />
+                <div className='affiliate-links'>
+                    <a href="https://curtiecares.org/" target="_blank"><StaticImage height={74} src='../../images/cc_logo.png' alt='Curtie Cares Inc.'/></a>
+                    <a href="https://francesexpress.com/" target="_blank"><StaticImage height={74} src='../../images/frances-express-logo-1200px.jpg' alt='Frances Express' /></a>
+                </div>
             </div>
         </header>
     )

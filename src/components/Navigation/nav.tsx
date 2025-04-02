@@ -6,15 +6,9 @@ const isActive = ({ isCurrent }: { isCurrent: boolean }) => {
     return isCurrent ? { className: "active" } : {}
 }
 
-const Nav = ({
-    open,
-    setOpen,
-}: {
-    open: boolean
-    setOpen?: (value: ((prevState: boolean) => boolean) | boolean) => void
-}) => {
+const Nav = () => {
     return (
-        <nav className={`${open ? "open" : "closed"}`}>
+        <nav>
             <ul>
                 <li>
                     <Link to="/about" getProps={isActive}>
