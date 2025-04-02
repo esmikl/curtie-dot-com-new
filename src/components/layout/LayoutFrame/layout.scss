@@ -1,5 +1,6 @@
+@use "../../../styles/breakpoints";
 @import "../../../styles/colors";
-@import "../../../styles/breakpoints";
+
 
 html,
 body {
@@ -47,7 +48,10 @@ a {
 }
 
 main {
-  margin-top: 6.625rem;
+  margin-top: 13rem;
+  @include breakpoints.media-breakpoint-up(sm) {
+    margin-top: 7rem;
+  }
 }
 
 a {
