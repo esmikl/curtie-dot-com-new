@@ -6,15 +6,17 @@
   display: block;
   @include breakpoints.media-breakpoint-up(md) {
     width: 100%;
-    margin-top: 7rem;
   }
 }
 
 .container.about {
-
+  margin-top: 17rem;
+  @include breakpoints.media-breakpoint-up(sm) {
+    margin-top: 15rem;
+  }
   @include breakpoints.media-breakpoint-up(md) {
     max-width: 1200px;
-    margin: auto;
+    margin: 12rem auto 0;
   }
 }
 

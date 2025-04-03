@@ -49,8 +49,8 @@ a {
 
 main {
   margin-top: 13rem;
-  @include breakpoints.media-breakpoint-up(sm) {
-    margin-top: 7rem;
+  @include breakpoints.media-breakpoint-up(tablet-sm) {
+    margin-top: 8rem;
   }
 }
 

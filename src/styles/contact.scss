@@ -1,4 +1,15 @@
 @use './colors';
+@use './breakpoints';
+
+.container.contact {
+  margin-top: 17rem;
+  @include breakpoints.media-breakpoint-up(sm) {
+    margin-top: 15rem;
+  }
+  @include breakpoints.media-breakpoint-up(md) {
+    margin: 12rem auto 0;
+  }
+}
 
 .form-container {
   max-width: 30rem;
